@@ -8,9 +8,11 @@ body {
 }
 
 header {
+    position: relative;
     margin: 0;
     display: flex;
     align-items: flex-start;
+    z-index: 2;
 }
 
 .btn-header {
@@ -151,4 +153,15 @@ header {
     border-bottom: 1px solid #0C748B;
     border-right: 1px solid #0C748B;
     background: #D9D9D9;
+}
+
+footer {
+    position: relative;
+    display: inline-block;
+    background: #D9D9D9;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    background: #D9D9D9;
+    top: 100%
 }

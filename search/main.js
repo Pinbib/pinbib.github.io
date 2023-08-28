@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     function followers(val) {
+        document.getElementById("followers").innerHTML = "<span>Followers:</span><br>";
+
         let follos = document.getElementById("followers");
 
         val.forEach(valu => {
@@ -59,6 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     function repositories(val) {
+        document.getElementById("repositories").innerHTML = "<span>Repositories:</span><br>";
+
         let repos = document.getElementById("repositories");
 
         val.forEach(valu => {
