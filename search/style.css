@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn-header {
+    margin: 0;
+    display: inline-block;
+    border-right: 0.5px solid #08687D;
+    border-bottom: 0.5px solid #08687D;
+    background: #D9D9D9;
+    height: 3%;
+    width: 10%;
+    cursor: pointer;
+}
+
+.btn-header:hover {
+    box-shadow: 2px 2px 5px rgba(69, 69, 69, 0.5);
+}
+
+.btn-header:active {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px rgba(69, 69, 69, 0.5);
+}
+
+.btn-search {
+    cursor: pointer;
+}
+
+.btn-search:active {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.search {
+    margin: 0 0 0 37%;
+    height: 3%;
+}
+
+.search-input {
+    border-radius: 25px;
+    border: 1px solid #0C748B;
+    background: #D9D9D9;
+    margin: 0;
+}
+
+.img-avatar {
+    height: 15%;
+    width: 15%;
+    border-right: 1px solid #0C748B;
+    border-bottom: 1px solid #0C748B;
+    background: #D9D9D9;
+}
+
+.username {
+    display: inline-block;
+    border-top: 1px solid #0C748B;
+    border-right: 1px solid #0C748B;
+    border-bottom: 1px solid #0C748B;
+    background: #D9D9D9;
+    margin-left: 1px;
+    width: 99.9%;
+}
+
+.bio {
+    display: inline-block;
+    border-top: 1px solid #0C748B;
+    border-right: 1px solid #0C748B;
+    border-bottom: 1px solid #0C748B;
+    background: #D9D9D9;
+    margin-left: 1px;
+    width: 99.9%;
+}
+
+.blog-and-company {
+    display: flex;
+    margin: 0;
+}
+
+.blog {
+    display: inline-block;
+    border-right: 1px solid #0C748B;
+    border-bottom: 1px solid #0C748B;
+    background: #D9D9D9;
+    width: 6%;
+}
+
+.company {
+    display: inline-block;
+    border-right: 1px solid #0C748B;
+    border-bottom: 1px solid #0C748B;
+    background: #D9D9D9;
+    width: 99%;
+}
+
+.repos-and-email {
+    display: flex;
+    margin: 0;
+}
+
+.repos {
+    display: inline-block;
+    border-right: 1px solid #0C748B;
+    border-bottom: 1px solid #0C748B;
+    background: #D9D9D9;
+    width: 20%;
+}
+
+.e-mail {
+    display: inline-block;
+    border-right: 1px solid #0C748B;
+    border-bottom: 1px solid #0C748B;
+    background: #D9D9D9;
+    width: 99%;
+}
+
+.follos {
+    display: inline-block;
+    border-right: 1px solid #0C748B;
+    border-bottom: 1px solid #0C748B;
+    background: #D9D9D9;
+    width: 99.9%;
+    margin-left: 1px;
+}
+
+.repositories {
+    display: inline-block;
+    margin-left: 1px;
+    width: 99.9%;
+    border-top: 1px solid #0C748B;
+    border-bottom: 1px solid #0C748B;
+    border-right: 1px solid #0C748B;
+    background: #D9D9D9;
+}
+
+.followers {
+    display: inline-block;
+    margin-left: 1px;
+    width: 99.9%;
+    border-top: 1px solid #0C748B;
+    border-bottom: 1px solid #0C748B;
+    border-right: 1px solid #0C748B;
+    background: #D9D9D9;
+}
