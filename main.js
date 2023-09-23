@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 span.innerText = input.value.trim();
                 document.getElementById("history").append(span);
 
-                toUrlJoin("https://pinbib.github.io", input.value.trim().split(" "));
+                toUrlJoin("/", input.value.trim().split(" "));
                 input.value = "";
             };
         };
