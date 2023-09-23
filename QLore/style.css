@@ -7,6 +7,15 @@ body {
 
 .title {
     font-size: 500%;
+    user-select: none;
+}
+
+.title:hover {
+    animation: jump 1s 1;
+}
+
+.title:hover>div>.Q {
+    animation: spin 2s 1;
 }
 
 .btnInstall {
@@ -14,11 +23,12 @@ body {
     text-align: center;
     border: solid rgb(203, 203, 203) 3px;
     border-radius: 6px;
+    user-select: none;
 }
 
 .btnInstall:hover {
     cursor: pointer;
-    box-shadow: 0 0 0 4px rgb(150, 150, 150);
+    box-shadow: 0 0 0 2px rgb(203, 203, 203);
     transform: scale(1.05);
 }
 
@@ -61,6 +71,20 @@ body {
     }
 
     to {
-        transform: rotateZ(360deg);
+        transform: rotateZ(-360deg);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }

@@ -46,4 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("github").addEventListener("click", async () => {
         await _inLink("https://github.com/Pinbib/QLore");
     });
+    document.getElementById("docs").addEventListener("click", async () => {
+        await _inLink("/QLore/Docs");
+    });
 });
