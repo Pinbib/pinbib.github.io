@@ -5,6 +5,10 @@ body {
     color: rgb(203, 203, 203);
 }
 
+.title {
+    font-size: 500%;
+}
+
 .btnInstall {
     margin: 2px;
     text-align: center;
