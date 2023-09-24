@@ -1,0 +1,48 @@
+/* * {
+    border: solid silver 1px;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(33, 33, 33);
+    color: rgb(203, 203, 203);
+}
+
+.title {
+    font-size: 500%;
+    user-select: none;
+}
+
+.title:hover {
+    animation: jump 1s 1;
+}
+
+.title:hover>div>.Q {
+    animation: spin 2s 1;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(-360deg);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

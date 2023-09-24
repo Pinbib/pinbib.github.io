@@ -6,13 +6,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta name="description" content="QLore is a tool for testing servers using simple scripts.">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <title>QLore Docs</title>
 </head>
 
 <body>
+    <div class="container-fluid" style="margin-top: 6%;">
+        <div class="row title" style="margin-bottom: 3%;">
+            <div class="col-md-5"></div>
+            <div class="col-md-4">
+                <svg class="Q" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
+                    fill="none">
+                    <path
+                        d="M47 25.5C47 37.9264 36.9264 48 24.5 48C12.0736 48 2 37.9264 2 25.5C2 13.0736 12.0736 3 24.5 3"
+                        stroke="#C4C4C4" stroke-width="4" stroke-linecap="round" />
+                    <circle cx="34.5" cy="15.5" r="12" stroke="#C3C3C3" />
+                    <path
+                        d="M34 10.0809L35.0988 13.4626L35.1044 13.4799H35.1226H38.6783L35.8017 15.5699L35.787 15.5806L35.7926 15.5979L36.8914 18.9796L34.0147 16.8896L34 16.8789L33.9853 16.8896L31.1086 18.9796L32.2074 15.5979L32.213 15.5806L32.1983 15.5699L29.3217 13.4799H32.8774H32.8956L32.9012 13.4626L34 10.0809Z"
+                        fill="#FFDD29" stroke="#FFD600" stroke-width="0.05" />
+                    <path
+                        d="M46.6001 49.4284C47.389 50.2015 48.6553 50.1888 49.4284 49.3999C50.2015 48.611 50.1888 47.3447 49.3999 46.5716L46.6001 49.4284ZM38.0143 41.0142L46.6001 49.4284L49.3999 46.5716L40.8141 38.1574L38.0143 41.0142Z"
+                        fill="#C3C3C3" />
+                </svg>Lore
+            </div>
+        </div>
 
+        <div class="docs">
+            <h3>Qlore is a tool for testing servers using simple and short scripts.</h3>
+            <p><a href="https://github.com/Pinbib/QLore#readme"><img
+                        src="https://cdn1.iconfinder.com/data/icons/picons-social/57/github_rounded-512.png"
+                        width="30"></a>
+                <a href="https://pinbib.github.io/QLore/"><img
+                        src="https://github.com/Pinbib/QLore/raw/main/favicon.ico" width="30"></a>
+            </p>
+            <h1>Installation</h1>
+            <p>Go to <a href="https://pinbib.github.io/QLore/">QLore</a> and select the file for your operating system.
+                After installation, you need to move the file to the directory for Windows - C:/Windows/System32, and
+                for MacOs and Linux - /usr/bin.</p>
+            <p>To move the file to /usr/bin, run the following commands:</p>
+            <pre><code class="hljs language-bash">sudo <span class="hljs-built_in">cp</span> QLore /usr/bin/
+        sudo <span class="hljs-built_in">chmod</span> +x /usr/bin/QLore
+        </code></pre>
+            <p>If after executing the command <code>qlore version</code> you receive a text like <span
+                    style="color: green;">QLore: [version]</span> then everything was successful.</p>
+            <h2>VS code</h2>
+            <p>If you use VSCode, then you can install highlighting and a snippet for more convenient use of QLore, to
+                do this, go to the <a href="https://pinbib.github.io/QLore/">QLore</a> website and click on the
+                "VSCode" button, after which it will start installation of a .zip archive containing the
+                necessary extensions (<a
+                    href="https://code.visualstudio.com/docs/editor/extension-marketplace#_install-from-a-vsix">how to
+                    install an extension from a .vsix file can be found here</a> ) .</p>
+            <h1>Syntax</h1>
+            <p>The code to run the script must be written in the .ql file</p>
+            <p>For tests, run the server using the express example of <a
+                    href="https://github.com/Pinbib/QLore/blob/main/test/server.js">this</a> (install express and
+                body-parser before starting). This is a server startup script on localhost:3000, which will generate an
+                error response when you change the login parameters.</p>
+            <h2>Create a request</h2>
+            <p>There are seven request types in total (POST, GET, PUT, PATCH, HEAD, DELETE, OPTIONS).</p>
+            <p>This is how the request is viewed in code:</p>
+            <pre><code class="hljs language-bash"><span style="color: blueviolet">[REQUEST]</span> [url]
+        </code></pre>
+            <p>REQUEST - this type of request (upper case)</p>
+            <p>url is where the request will be sent (be sure to start with http:// or https://)</p>
+            <h2>Request parameters</h2>
+            <p>To add a parameter to a request, you must first create it (as shown above), then you need to add code in
+                the same way:</p>
+            <pre><code class="hljs language-bash"><span style="color: rgb(90, 90, 255)">? </span>[parameter_name] [= or ::] [value]
+        </code></pre>
+            <p>parameter_name is the parameter name without spaces</p>
+            <p>followed by = or ::</p>
+            <p>value - this value will be entered into the parameter</p>
+            <p>This is what the complete code should look like:</p>
+            <pre><code class="hljs language-bash"><span style="color: blueviolet">GET</span> http://localhost:3000
+        <span style="color: rgb(90, 90, 255)"></span>login = true
+        </code></pre>
+            <h2>Dispatch</h2>
+            <p>To send a request, you must first create it (as shown above), then select this code:</p>
+            <pre><code class="hljs language-bash"><span style="color: blue"><<< [OPTIONS SEPARATED BY SPACE]</span>
+        </code></pre>
+            <p>PARAMETERS SEPARATED BY SPACE - for parameters that can only be disabled by parameter, there are four
+                (ERROR, SUCCESS, REQUEST, REQUEST_END), and they must be impersonated in upper case, and if there are
+                several of them, separated by a space.</p>
+            <p>ERROR—Disable displaying request errors.</p>
+            <p>Example: <code><prev>
+            <span style="color: blue"><<< ERROR</span>
+            </pre></code></p>
+            <p>SUCCESS - disable response information output</p>
+            <p>Example: <code><prev>
+            <span style="color: blue"><<< SUCCESS</span>
+            </pre></code></p>
+            <p>REQUEST - disable the display of information about sending a request</p>
+            <p>Example: <code><prev>
+            <span style="color: blue"><<< REQUEST</span>
+            </pre></code></p>
+            <p>REQUEST_END - disable displaying information about request completion</p>
+            <p>Example: <code><prev>
+            <span style="color: blue"><<< REQUEST_END</span>
+            </pre></code></p>
+            <p>This is what a complete GET request will look like with error output disabled:</p>
+            <pre><code class="hljs language-bash"><span style="color: blueviolet">GET</span> http://localhost:3000
+        <span style="color: rgb(90, 90, 255)"></span>login = true
+        <span style="color: blue"><<< ERROR</span>
+        </code></pre>
+            <h2>Running the script</h2>
+            <p>To run the script, you need to open a terminal and configure:</p>
+            <pre><code class="hljs language-bash">qlore run path/to/file.ql
+        </code></pre>
+            <p>If you did what was given above, then you should have received something similar to this:</p>
+            <pre><code class="hljs language-bash"><span style="color: green;">
+        Sending a request to http://localhost:3000?login=true.
+        Start: 23.9.2023:18:34
+        http://localhost:3000?login=true
+        Status: 200
+        Text: OK
+        Method: GET
+        Data: false
+        The request to http://localhost:3000?login=true is completed.
+        End: 23.9.2023:18:34
+        </code></pre>
+            <h1>P.S</h1>
+            <p>This documentation was translated into English using Google Translator, most likely there will be a lot
+                of errors here. (And this text too :)</p>
+        </div>
+    </div>
 </body>
 
 </html>
