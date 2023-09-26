@@ -1,3 +1,12 @@
+(async () => {
+    let req = await fetch("https://raw.githubusercontent.com/Pinbib/QLore/main/package.json");
+    req.json().then(val => {
+        document.querySelector("#version").innerHTML = `v${val.version}`;
+    }).catch(err => {
+        if (err) document.querySelector("#version").innerHTML = `v?`;
+    });
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
     async function inLink(url) {
         document.querySelector(".l").style.display = "block";
