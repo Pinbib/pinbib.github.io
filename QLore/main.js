@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector(".l").style.display = "none";
         }, 2000);
     };
-
     function points() {
         let point = document.getElementById("points");
         if (point.innerHTML.split("").length == 3) {
@@ -40,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(points, 500);
 
     document.getElementById("installWindow").addEventListener("click", async () => {
-        document.querySelector(".l").style.display = "block";
         await inLink("https://github.com/Pinbib/QLore/raw/main/PKG/win/QLore.exe");
     });
     document.getElementById("installMacOs").addEventListener("click", async () => {
@@ -55,7 +53,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("github").addEventListener("click", async () => {
         await _inLink("https://github.com/Pinbib/QLore");
     });
-    document.getElementById("docs").addEventListener("click", async () => {
-        await _inLink("/QLore/Docs");
+    document.getElementById("more").addEventListener("click", () => {
+        document.getElementById("more").parentElement.innerHTML = `
+        <div class="col-md-4"></div>
+        <div class="btnInstall col-md-2" id="docs"><span>Docs</span></div>
+        <div class="btnInstall col-md-2" id="commits"><span>Commits</span></div>
+        `;
+
+        document.getElementById("docs").addEventListener("click", async () => {
+            await _inLink("/Docs");
+        });
+        document.getElementById("commits").addEventListener("click", async () => {
+            await _inLink("/Commits");
+        });
     });
 });
