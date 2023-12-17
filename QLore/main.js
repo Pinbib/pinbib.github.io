@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         document.getElementById("docs").addEventListener("click", async () => {
-            await _inLink("QLore/Docs");
+            await _inLink("Docs");
         });
         document.getElementById("commits").addEventListener("click", async () => {
-            await _inLink("QLore/Commits");
+            await _inLink("Commits");
         });
     });
 });
