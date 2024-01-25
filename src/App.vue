@@ -29,7 +29,7 @@ export default {
         new Project_("QLore", "QLore is a tool for testing servers using simple scripts.", "https://github.com/Pinbib/QLore")
       ],
       subpages: [
-        new Subpage_("QLore", "/QLore"),
+        new Subpage_("QLore", "/.qlore"),
         new Subpage_("Search", "/search"),
         new Subpage_("QSub", "/QSub")
       ]
